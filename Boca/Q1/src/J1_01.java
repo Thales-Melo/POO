@@ -1,4 +1,4 @@
-public class App {
+public class J1_01 {
     
     public static double calculaS1() {
         
@@ -43,8 +43,8 @@ public class App {
     
     public static void main(String[] args) throws Exception {
         
-        System.out.println(calculaS1());
-        System.out.println(calculaS2());
-        System.out.println(calculaS3());
+        System.out.println("S1 = " + calculaS1());
+        System.out.println("S2 = " + calculaS2());
+        System.out.println("S3 = " + calculaS3());
     }
 }
