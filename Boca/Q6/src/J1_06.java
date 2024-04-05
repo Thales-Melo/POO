@@ -35,7 +35,7 @@ public class J1_06 {
 
 
     public static void matrix_Print(double[][] matrix) {
-        DecimalFormat df = new DecimalFormat("#.00", DecimalFormatSymbols.getInstance(Locale.US));
+        DecimalFormat df = new DecimalFormat("0.00", DecimalFormatSymbols.getInstance(Locale.US));
         for (int n=0; n<matrix.length; n++) {
             for (int m=0; m<matrix[0].length; m++) {
                 System.out.print(df.format(matrix[n][m]) + " ");
