@@ -13,8 +13,10 @@ public class J1_10 {
     
     if (n>0) {
         System.out.printf("0 ");
-        System.out.printf("1 ");
-        first_last = 1;
+        if (n>1) {
+            System.out.printf("1 ");
+            first_last = 1;
+        }
     }
 
     for (int i=0; i<n-2; i++) {
@@ -25,7 +27,8 @@ public class J1_10 {
     }
 
     System.out.println();
-
+    System.out.println();
+    
     input.close();
         
     }
