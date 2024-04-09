@@ -1,8 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Departamento {
     private String name;
-    private Funcionario employee_list[];
+    private List <Funcionario> employee_list;
+    // List<Integer> impares = new ArrayList<Integer>();
 
-    public void setEmployee_list(Funcionario[] employee_list) {
+    public Departamento() {
+        employee_list = new ArrayList<Funcionario>();
+    }
+
+    public void setEmployee_list(List<Funcionario> employee_list) {
         this.employee_list = employee_list;
     }
 
@@ -11,7 +19,7 @@ public class Departamento {
     }
 
 
-    public Funcionario[] getEmployee() {
+    public List<Funcionario> getEmployee_list() {
         return employee_list;
     }
 
@@ -21,23 +29,26 @@ public class Departamento {
 
 
     public void addEmployeeToDepartment(Funcionario employee) {
-        for (int i=0; i<employee_list.length; i++) {
-            if (employee_list[i] == null) {
-                employee_list[i] = employee;
-                break;
-            }
-        }
+        // int added = 0;
+        // for (int i=0; i<employee_list.length; i++) {
+        //     if (employee_list[i] == null) {
+        //         employee_list[i] = employee;
+        //         break;
+        //     }
+        // }
+            employee_list.add(employee);
+
     }
 
 
-    public void createEmployeelist(int size) {
-        employee_list = new Funcionario[size];
-    }
+    // public void createEmployeelist(int size) {
+    //     employee_list = new Funcionario[size];
+    // }
 
 
     public void growSalary(double rate) {
-        for (int i=0; i<employee_list.length; i++) {
-            Funcionario emp = employee_list[i];
+        for (int i=0; i<employee_list.size(); i++) {
+            Funcionario emp = employee_list.get(i);
             if (emp != null) {
                 emp.setSalary(emp.getSalary()+emp.getSalary()*(rate/100));
             }
@@ -47,8 +58,8 @@ public class Departamento {
 
     public double departmentSalary() {
         double departSalary = 0;
-        for (int i=0; i<employee_list.length; i++) {
-            Funcionario emp = employee_list[i];
+        for (int i=0; i<employee_list.size(); i++) {
+            Funcionario emp = employee_list.get(i);
             if (emp != null) {
                 departSalary += emp.getSalary();
             }
@@ -58,12 +69,8 @@ public class Departamento {
     }
 
     public Funcionario removeEmployee(int i) {
-        Funcionario emp = employee_list[i];
-        for (int k=i; k<employee_list.length; k++) {
-            employee_list[k] = employee_list[k+1];
-        }
 
-        return emp;
+        return employee_list.remove(i);
     }
 
 }

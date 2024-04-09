@@ -1,3 +1,6 @@
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class J1_08 {
@@ -8,9 +11,9 @@ public class J1_08 {
         String line[] = input.nextLine().split("\\s+");
         
         company.setName(line[0]);
-        System.out.println(company.getName());
+        // System.out.println(company.getName());
         company.setCNPJ(line[1]);
-        System.out.println(company.getCNPJ());
+        // System.out.println(company.getCNPJ());
 
         int n_deps = Integer.parseInt(line[2]);
         company.createDepartmentList(n_deps);
@@ -26,7 +29,7 @@ public class J1_08 {
             int n_emps = Integer.parseInt(line[1]);
             // System.out.println("N_funcionarios = " + n_emps);
             
-            depart.createEmployeelist(n_emps);
+            // depart.createEmployeelist(n_emps);
             for (int k=0; k<n_emps; k++) {
                 line = input.nextLine().split("\\s+");
 
@@ -50,23 +53,12 @@ public class J1_08 {
 
             company.addDepartmentToCompany(depart);
         }
-
-        // System.out.println("\n" + company.getName());
-        // System.out.println(company.getCNPJ());
-
-
-        // Alterações necessárias
-
-        System.out.println("\n\n\n\n");
-
-        // Aumento de 10% a todos os funcionários do primeiro departamento
-        // Transferir o primeiro funcionário do primeiro departamento ao segundo departamento
-
-        // System.out.println("departSalary (pré) = " + company.departmentSalary(0));
-        company.changeEmployeeFromDepartment(0, 1, 0);
+        
+        Locale loc = new Locale("pt", "BR");
         company.growDepartmentSalary(0, 10);
-        System.out.println("departSalary = " + company.departmentSalary(0));
-        System.out.println("departSalary = " + company.departmentSalary(1));
+        company.changeEmployeeFromDepartment(0, 1, 0);
+        System.out.printf(loc, "%s R$ %.2f\n", company.departmentName(0), company.departmentSalary(0));
+        System.out.printf(loc, "%s R$ %.2f\n", company.departmentName(1), company.departmentSalary(1));
         
 
         input.close();

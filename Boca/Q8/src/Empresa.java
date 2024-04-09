@@ -48,7 +48,6 @@ public class Empresa {
     public void growDepartmentSalary(int department, double rate) {
         Departamento depart = getDepartment(department);
         depart.growSalary(rate);
-        
     }
 
     public double departmentSalary(int department) {
@@ -61,7 +60,12 @@ public class Empresa {
         Departamento dpt_dest = departmentList[dest];
 
         Funcionario emp = dpt_src.removeEmployee(employee_num);
-        dpt_dest.addEmployeeToDepartment(emp);   
+        dpt_dest.addEmployeeToDepartment(emp);  
+    }
+
+
+    public String departmentName(int i) {
+        return departmentList[i].getName();
     }
 
 }
