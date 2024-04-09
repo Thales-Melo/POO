@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Empresa {
     private String name;
@@ -67,4 +68,12 @@ public class Empresa {
         return departmentList.get(i).getName();
     }
 
+
+    public void printData() {
+        Locale loc = new Locale("pt", "BR");
+        for (int i=0; i<departmentList.size(); i++) {
+            System.out.printf(loc, "%s R$ %.2f\n", departmentName(i), departmentSalary(i));
+        }
+        
+    }
 }
