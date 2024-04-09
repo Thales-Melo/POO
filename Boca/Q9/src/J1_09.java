@@ -6,6 +6,7 @@ public class J1_09 {
         Scanner input = new Scanner(System.in);
 
         int num_students = input.nextInt();
+        input.nextLine();
         Student[] classroom = new Student[num_students];
         double classMean = 0;
 
@@ -14,10 +15,10 @@ public class J1_09 {
             Student student = new Student();
 
             student.setName(line[0]);
-            student.setGrade(0, Double.parseDouble(line[1]));
-            student.setGrade(1, Double.parseDouble(line[2]));
-            student.setGrade(2, Double.parseDouble(line[3]));
-
+            student.setGrade(Double.parseDouble(line[1]), 0);
+            student.setGrade(Double.parseDouble(line[2]), 1);
+            student.setGrade(Double.parseDouble(line[3]), 2);
+            
             classroom[i] = student;
             classMean += student.mean();
         }
@@ -31,7 +32,6 @@ public class J1_09 {
             s.printResult();
             System.out.printf(",");
             s.compareToClassMean(classMean);
-            System.out.println();
         }
 
         input.close();
