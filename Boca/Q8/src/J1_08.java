@@ -11,13 +11,13 @@ public class J1_08 {
         String line[] = input.nextLine().split("\\s+");
         
         company.setName(line[0]);
-        // System.out.println(company.getName());
+        System.out.println(company.getName());
         company.setCNPJ(line[1]);
-        // System.out.println(company.getCNPJ());
+        System.out.println(company.getCNPJ());
 
         int n_deps = Integer.parseInt(line[2]);
-        company.createDepartmentList(n_deps);
-        // System.out.println("n_deps = " + n_deps);
+        // company.createDepartmentList(n_deps);
+        System.out.println("n_deps = " + n_deps);
 
         for (int i=0; i<n_deps; i++) {
             line = input.nextLine().split("\\s+");
@@ -25,9 +25,9 @@ public class J1_08 {
 
             
             depart.setName(line[0]);
-            // System.out.println("depart_name = " + depart.getName());
+            System.out.println("depart_name = " + depart.getName());
             int n_emps = Integer.parseInt(line[1]);
-            // System.out.println("N_funcionarios = " + n_emps);
+            System.out.println("N_funcionarios = " + n_emps);
             
             // depart.createEmployeelist(n_emps);
             for (int k=0; k<n_emps; k++) {
@@ -36,10 +36,10 @@ public class J1_08 {
                 Funcionario employee = new Funcionario();
 
                 employee.setName(line[0]);
-                // System.out.println("employee_name = " + employee.getName());
+                System.out.println("employee_name = " + employee.getName());
                 
                 employee.setSalary(Double.parseDouble(line[1]));
-                // System.out.println("employee_salary = " + employee.getSalary());
+                System.out.println("employee_salary = " + employee.getSalary());
 
                 String date_str[] = line[2].split("/");
                 Data date = new Data();
@@ -54,6 +54,8 @@ public class J1_08 {
             company.addDepartmentToCompany(depart);
         }
         
+        System.out.println("\n\n\n\n");
+
         Locale loc = new Locale("pt", "BR");
         company.growDepartmentSalary(0, 10);
         company.changeEmployeeFromDepartment(0, 1, 0);

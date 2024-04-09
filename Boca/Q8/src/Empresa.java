@@ -1,12 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empresa {
     private String name;
     private String CNPJ;
-    private Departamento departmentList[];
+    private List <Departamento> departmentList;
+
+    public Empresa () {
+        departmentList = new ArrayList<Departamento>();
+    }
 
     public void setCNPJ(String cNPJ) {
         CNPJ = cNPJ;
     }
-    public void setDepartmentList(Departamento[] departmentList) {
+    
+    public void setDepartmentList(List<Departamento> departmentList) {
         this.departmentList = departmentList;
     }
 
@@ -19,12 +27,12 @@ public class Empresa {
         return CNPJ;
     }
 
-    public Departamento[] getDepartmentList() {
+    public List<Departamento> getDepartmentList() {
         return departmentList;
     }
 
     public Departamento getDepartment(int i) {
-        return departmentList[i];
+        return departmentList.get(i);
     }
 
     public String getName() {
@@ -33,16 +41,7 @@ public class Empresa {
     
 
     public void addDepartmentToCompany(Departamento department) {
-        for (int i=0; i<departmentList.length; i++) {
-            if (departmentList[i] == null) {
-                departmentList[i] = department;
-                break;
-            }
-        }
-    }
-
-    public void createDepartmentList(int size) {
-        departmentList = new Departamento[size];
+        departmentList.add(department);
     }
 
     public void growDepartmentSalary(int department, double rate) {
@@ -56,8 +55,8 @@ public class Empresa {
 
     
     public void changeEmployeeFromDepartment(int src, int dest, int employee_num) {
-        Departamento dpt_src = departmentList[src];
-        Departamento dpt_dest = departmentList[dest];
+        Departamento dpt_src = departmentList.get(src);
+        Departamento dpt_dest = departmentList.get(dest);
 
         Funcionario emp = dpt_src.removeEmployee(employee_num);
         dpt_dest.addEmployeeToDepartment(emp);  
@@ -65,7 +64,7 @@ public class Empresa {
 
 
     public String departmentName(int i) {
-        return departmentList[i].getName();
+        return departmentList.get(i).getName();
     }
 
 }
