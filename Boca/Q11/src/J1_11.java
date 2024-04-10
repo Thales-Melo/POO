@@ -15,6 +15,7 @@ public class J1_11 {
             c.adicionar(nome, preco, qtd);
         }
 
+        c.printConteudo();
 
         scanner.close();
     }
