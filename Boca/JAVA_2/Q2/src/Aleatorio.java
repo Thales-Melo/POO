@@ -14,11 +14,14 @@ public class Aleatorio {
     public Aleatorio (int valor_max, long seed) {
         gerador = new Random(seed);
         VALOR_MAXIMO_DEFAULT = valor_max;
-        // numGenerated = gerador.nextInt(VALOR_MAXIMO_DEFAULT);
+        numGenerated = gerador.nextInt(VALOR_MAXIMO_DEFAULT);
     }
 
-    public long getNumGenerated() {
+    public void renovar() {
         numGenerated = gerador.nextInt(VALOR_MAXIMO_DEFAULT);
+    }
+
+    public int getNumGenerated() {
         return numGenerated;
     }
 
