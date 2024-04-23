@@ -4,7 +4,7 @@ public class Cliente {
 
     public Cliente (String nome) {
         this.nome = nome;
-        this.CPF = null;
+        this.CPF = "";
     }
 
 
@@ -55,6 +55,10 @@ public class Cliente {
         digito = 11 - (soma % 11);
         if (digito > 9) digito = 0;
         return digito;
+    }
+
+    public void printCliente () {
+        System.out.println(this.nome + " " + CPF);
     }
 
 }

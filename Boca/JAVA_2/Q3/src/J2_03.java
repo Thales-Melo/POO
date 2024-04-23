@@ -28,14 +28,7 @@ public class J2_03 {
 
 
         for (int i=0; i<listaClientes.size(); i++) {
-            String CPF = listaClientes.get(i).getCPF();
-            if (CPF != null) {
-                System.out.println(listaClientes.get(i).getNome() + " " + CPF);
-            }
-
-            else {
-                System.out.println(listaClientes.get(i).getNome());
-            }
+            listaClientes.get(i).printCliente();
         }
 
         input.close();
