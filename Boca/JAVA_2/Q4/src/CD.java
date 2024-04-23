@@ -11,4 +11,9 @@ public class CD extends Produto {
     }
     
 
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" - %d faixas", numFaixas);
+    }
+
 }

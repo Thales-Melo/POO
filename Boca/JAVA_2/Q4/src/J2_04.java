@@ -26,13 +26,19 @@ public class J2_04 {
             }
 
             else if (op.equals("D")) {
-                DVD DVD = new DVD(line[1], Double.parseDouble(line[2]), Double.parseDouble(line[3]));
+                DVD DVD = new DVD(line[1], Double.parseDouble(line[2]), Integer.parseInt(line[3]));
                 listaProdutos.add(DVD);
             }
 
         }
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
         
+        for (int i=0; i<N; i++) {
+            System.out.println(listaProdutos.get(i).toString());
+        }
 
         input.close();
     
