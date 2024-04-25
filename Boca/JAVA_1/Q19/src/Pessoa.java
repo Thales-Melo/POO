@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Pessoa {
     private String nome;
     private int idade;
@@ -23,6 +25,7 @@ public class Pessoa {
 
     @Override
     public String toString () {
+        Locale.setDefault(Locale.forLanguageTag("pt-BR"));
         return String.format("%s (%d anos, %.2f metros)", this.nome, this.idade, this.altura);
     }
     

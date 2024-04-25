@@ -9,11 +9,11 @@ public class J1_19 {
         String verify = input.nextLine();
         
         while (verify.equals(".") == false) {
-            String entry[] = verify.split(";");
-            String alturaComVirgula[] = entry[2].split(",");
-            double altura = Double.parseDouble(alturaComVirgula[0]) + 0.01*Double.parseDouble(alturaComVirgula[1]); 
+            verify = verify.replace(",", ".");
 
-            Pessoa pessoa = new Pessoa(entry[0], Integer.parseInt(entry[1]), altura);
+            String entry[] = verify.split(";");
+
+            Pessoa pessoa = new Pessoa(entry[0], Integer.parseInt(entry[1]), Double.parseDouble(entry[2]));
         
             listaPessoas.add(pessoa);
             
