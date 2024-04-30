@@ -16,4 +16,9 @@ public class CD extends Produto {
         return super.toString() + String.format(" - %d faixas", numFaixas);
     }
 
+    @Override
+    public boolean ehCaro () {
+        return this.preco > 10;
+    }
+
 }

@@ -15,4 +15,11 @@ public class DVD extends Produto {
     public String toString() {
         return super.toString() + String.format(" - %d minutos", duracao);
     }
+
+    @Override
+    public boolean ehCaro () {
+        return this.preco > 50;
+    }
+
+
 }

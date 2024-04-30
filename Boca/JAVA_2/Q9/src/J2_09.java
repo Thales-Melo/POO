@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,10 +33,14 @@ public class J2_09 {
             }
         }
 
-        Collections.sort(listaProdutos);
-
         for (Produto produto : listaProdutos) {
             System.out.println(produto);
+            if (produto.ehCaro()) {
+                System.out.println("Produto esta caro");
+            }
+            else {
+                System.out.println("Produto nao esta caro");
+            }
         }
 
         input.close();
