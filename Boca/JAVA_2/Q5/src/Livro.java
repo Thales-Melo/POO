@@ -10,9 +10,4 @@ public class Livro extends Produto {
         return autor;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + String.format(" - %s", autor);
-    }
-    // Harry Potter e as Reliquias da Morte (R$ 39.51) - J. K. Rowling
 }

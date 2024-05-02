@@ -1,6 +1,5 @@
-public class Circulo extends Forma {
+public class Circulo implements Forma {
     private double raio;
-    private static final double PI = 3.14;
 
     public Circulo (double raio) {
         this.raio = raio;
@@ -8,21 +7,21 @@ public class Circulo extends Forma {
 
     @Override
     public double calcularArea () {
-        return PI*raio*raio;
+        return Math.PI*this.raio*this.raio;
     }
 
     @Override
     public double calcularPerimetro () {
-        return 2*PI*raio;
+        return 2*Math.PI*this.raio;
     }
 
     public double getRaio() {
-        return raio;
+        return this.raio;
     }
 
     @Override
     public String toString() {
-        return String.format("Circulo de raio %.2f - perimetro: %.2f; area: %.2f", this.raio, this.calcularPerimetro(), this.calcularArea()).replace(",", ".");
+        return String.format("Circulo de raio %.2f - perimetro: %.2f; area: %.2f.", this.raio, this.calcularPerimetro(), this.calcularArea()).replace(",", ".");
     }
 
 }

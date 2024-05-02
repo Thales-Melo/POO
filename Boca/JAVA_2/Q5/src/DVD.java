@@ -10,9 +10,4 @@ public class DVD extends Produto {
         return duracao;
     }
     
-
-    @Override
-    public String toString() {
-        return super.toString() + String.format(" - %d minutos", duracao);
-    }
 }

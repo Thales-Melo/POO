@@ -1,29 +1,20 @@
 public class Retangulo extends Quadrilatero { 
-    private double base;
-    private double altura;
 
     public Retangulo (double base, double altura) {
         super (base, altura, base, altura);
-        this.base = base;
-        this.altura = altura;
-    }
-
-    @Override
-    public double calcularArea() {
-        return base * altura;
     }
 
     public double getAltura() {
-        return altura;
+        return this.lados[1];
     }
 
     public double getBase() {
-        return base;
+        return this.lados[0];
     }
 
     @Override  
     public String toString () {
-        return String.format("Retangulo de base %.2f e altura %.2f - perimetro: %.2f; area: %.2f", this.base, this.altura, this.calcularPerimetro(), this.calcularArea()).replace(",", ".");
+        return String.format("Retangulo de base %.2f e altura %.2f - perimetro: %.2f; area: %.2f.", this.lados[0], this.lados[1], this.calcularPerimetro(), this.calcularArea()).replace(",", ".");
     }
 
 }

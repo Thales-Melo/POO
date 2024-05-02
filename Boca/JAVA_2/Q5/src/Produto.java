@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Produto {
     protected int codigoDeBarras;
     protected String nome;
@@ -22,12 +20,6 @@ public class Produto {
     public int getCodigoDeBarras() {
         return codigoDeBarras;
     }
-
-    @Override
-    public String toString () {
-        return String.format(Locale.US, "%s (R$ %.2f)", nome, preco);
-    }
-
     
     @Override
     public boolean equals(Object obj) {

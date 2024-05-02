@@ -1,19 +1,22 @@
-abstract class Quadrilatero extends Forma {
-    private double lado_1;
-    private double lado_2;
-    private double lado_3;
-    private double lado_4;
+abstract class Quadrilatero implements Forma {
+    protected double[] lados;
 
     public Quadrilatero (double lado_1, double lado_2, double lado_3, double lado_4) {
-        this.lado_1 = lado_1;
-        this.lado_2 = lado_2;
-        this.lado_3 = lado_3;
-        this.lado_4 = lado_4;
+        this.lados = new double[4];
+        this.lados[0] = lado_1;
+        this.lados[1] = lado_2;
+        this.lados[2] = lado_3;
+        this.lados[3] = lado_4;
+    }
+
+    @Override
+    public double calcularArea() {
+        return this.lados[0] * this.lados[1];
     }
 
     @Override
     public double calcularPerimetro () {
-        return this.lado_1+this.lado_2+this.lado_3+this.lado_4;
+        return this.lados[0]+this.lados[1]+this.lados[2]+this.lados[3];
     }
 
 }

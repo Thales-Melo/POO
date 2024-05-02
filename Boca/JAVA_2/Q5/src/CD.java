@@ -9,11 +9,6 @@ public class CD extends Produto {
     public int getNumFaixas() {
         return numFaixas;
     }
-    
 
-    @Override
-    public String toString() {
-        return super.toString() + String.format(" - %d faixas", numFaixas);
-    }
 
 }
