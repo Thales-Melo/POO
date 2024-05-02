@@ -42,6 +42,7 @@ public class J2_08 {
         for (Forma forma : listaFormas) {
             System.out.println(forma);
         }
+        System.out.println();
 
         input.close();
     }

@@ -5,12 +5,10 @@ public class Circulo implements Forma {
         this.raio = raio;
     }
 
-    @Override
     public double calcularArea () {
         return Math.PI*this.raio*this.raio;
     }
 
-    @Override
     public double calcularPerimetro () {
         return 2*Math.PI*this.raio;
     }
