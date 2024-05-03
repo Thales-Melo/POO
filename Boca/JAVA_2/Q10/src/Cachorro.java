@@ -1,35 +1,32 @@
 public class Cachorro extends Animal {
     public Cachorro (String nome) {
-        super(nome);
+        this.nome = nome;
     }
 
-
     @Override
-    String getEspecie() {
+    public String getEspecie() {
         return "lupus";
     }
 
-
     @Override
-    String getGenero() {
+    public String getGenero() {
         return "Canis";
     }
 
-
     @Override
-    String getSubEspecie() {
+    public String getSubEspecie() {
         return "familiaris";    
     }
 
 
     @Override
-    boolean predar(Animal animal) {
+    public boolean predar(Animal animal) {
         return false;
     }
 
 
     @Override
-    String emitirSom() {
+    public String emitirSom() {
         return "auau";
     }
     

@@ -1,30 +1,29 @@
 public class Lobo extends Animal {
     public Lobo (String nome) {
-        super(nome);
-    }
+        this.nome = nome;    }
 
 
     @Override
-    String getEspecie() {
+    public String getEspecie() {
         return "lupus";
     }
 
 
     @Override
-    String getGenero() {
+    public String getGenero() {
         return "Canis";
     }
 
 
     @Override
-    String getSubEspecie() {
+    public String getSubEspecie() {
         return "";    
     }
 
 
     @Override
-    boolean predar(Animal animal) {
-        if (!(animal instanceof Lobo && animal instanceof Leao)) {
+    public boolean predar(Animal animal) {
+        if (!(animal instanceof Lobo || animal instanceof Leao)) {
             return true;
         }
         return false;
@@ -32,7 +31,7 @@ public class Lobo extends Animal {
 
 
     @Override
-    String emitirSom() {
+    public String emitirSom() {
         return "howl";
     }
 

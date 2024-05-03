@@ -1,0 +1,13 @@
+Tipo nao existe!
+60.0 6 AFF1234 Diesel Ford Joaozinho
+caminhao iniciou
+fomfom
+caminhao parou
+80.0 4 CHA7012 Gasolina Peugeot Doido
+carro iniciou
+bibi
+carro parou
+30.0 2 Caloi Magnos
+bicicleta iniciou
+pimpim
+bicicleta parou

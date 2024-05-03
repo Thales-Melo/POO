@@ -1,0 +1,4 @@
+Cam 60 6 AFF1234 Diesel Ford Joaozinho
+Car 80 4 CHA7012 Gasolina Peugeot Doido
+Bic 30 2 Caloi Magnos
+

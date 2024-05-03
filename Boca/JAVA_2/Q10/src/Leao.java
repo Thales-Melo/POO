@@ -1,29 +1,28 @@
 public class Leao extends Animal {
     public Leao (String nome) {
-        super(nome);
-    }
+        this.nome = nome;    }
     
 
     @Override
-    String getEspecie() {
+    public String getEspecie() {
         return "leo";
     }
 
 
     @Override
-    String getGenero() {
+    public String getGenero() {
         return "Panthera";
     }
 
 
     @Override
-    String getSubEspecie() {
+    public String getSubEspecie() {
         return "";    
     }
 
 
     @Override
-    boolean predar(Animal animal) {
+    public boolean predar(Animal animal) {
         if (!(animal instanceof Leao)) {
             return true;
         }
@@ -32,7 +31,7 @@ public class Leao extends Animal {
 
 
     @Override
-    String emitirSom() {
+    public String emitirSom() {
         return "rawr";
     }
 

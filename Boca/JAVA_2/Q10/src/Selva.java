@@ -17,7 +17,9 @@ public class Selva {
 
 
     public void add (Animal animal) {
-        listaAnimais.add(animal);
+        if (animal != null) {
+            listaAnimais.add(animal);
+        }
     }
 
 
@@ -37,6 +39,11 @@ public class Selva {
             this.listaAnimais.remove(presa);
             return true;
         }
+        else if (presa.predar(predador)) {
+            this.listaAnimais.remove(predador);
+            return true;
+        }
+
         return false;
     }
 

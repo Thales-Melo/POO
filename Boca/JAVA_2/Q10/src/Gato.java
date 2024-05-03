@@ -1,35 +1,34 @@
 public class Gato extends Animal {
     public Gato (String nome) {
-        super(nome);
-    }
+        this.nome = nome;    }
 
 
     @Override
-    String getEspecie() {
+    public String getEspecie() {
         return "silvestris";
     }
 
 
     @Override
-    String getGenero() {
+    public String getGenero() {
         return "Felis";
     }
 
 
     @Override
-    String getSubEspecie() {
+    public String getSubEspecie() {
         return "catus";    
     }
 
 
     @Override
-    boolean predar(Animal animal) {
+    public boolean predar(Animal animal) {
         return false;
     }
 
     
     @Override
-    String emitirSom() {
+    public String emitirSom() {
         return "miau";
     }
 

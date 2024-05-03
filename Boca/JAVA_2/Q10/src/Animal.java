@@ -1,13 +1,5 @@
 abstract class Animal {
     protected String nome;
-    protected String genero;
-    protected String especie;
-    protected String subEspecie; 
-
-
-    public Animal (String nome) {
-        this.nome = nome;
-    }
 
 
     public String getNome() {
@@ -15,23 +7,25 @@ abstract class Animal {
     }
 
 
-    abstract String emitirSom();
+    public abstract String emitirSom();
 
 
-    abstract boolean predar(Animal animal);
+    public abstract boolean predar(Animal animal);
 
 
-    abstract String getGenero();
+    public abstract String getGenero();
 
 
-    abstract String getEspecie();
+    public abstract String getEspecie();
 
 
-    abstract String getSubEspecie();
+    public abstract String getSubEspecie();
+
 
     @Override
     public String toString() {
         return String.format("%s %s %s %s %s", this.getNome(), this.getGenero(), this.getEspecie(), this.getSubEspecie(), this.emitirSom());
     }
     
+
 }
