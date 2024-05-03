@@ -1,7 +1,10 @@
-public class Pessoa {
+abstract class Pessoa {
     private String nome;
     private String sobrenome;
 
+    public Pessoa() {
+        
+    }
 
     public String getNome() {
         return nome;
@@ -18,5 +21,6 @@ public class Pessoa {
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
+
 
 }

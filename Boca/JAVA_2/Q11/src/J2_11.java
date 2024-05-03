@@ -13,7 +13,7 @@ public class J2_11 {
             }
 
             String[] entry = line.split("\\s+");
-
+            
             switch (entry[0]) {
                 case "A":
                     Aluno aluno = new Aluno();
