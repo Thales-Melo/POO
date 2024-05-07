@@ -6,7 +6,7 @@ public class ValorNegativoException extends Exception {
     }
     
     public ValorNegativoException (Double valor) {
-        super(String.format("Nao é possivel depositar/sacar um valor negativo: %.2lf", valor));
+        super(String.format("Nao é possivel depositar/sacar um valor negativo: %.2f", valor));
         this.valor = valor;
     }
 }

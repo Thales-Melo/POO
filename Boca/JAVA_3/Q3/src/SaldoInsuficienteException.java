@@ -11,7 +11,7 @@ public class SaldoInsuficienteException extends Exception {
     }
 
     public SaldoInsuficienteException (Double saldo, Double valor) {
-        super(String.format("Voce deseja sacar %.2lf, porem seu saldo é de apenas %.2lf.", saldo, valor));
+        super(String.format("Voce deseja sacar %.2f, porem seu saldo é de apenas %.2f.", saldo, valor));
         this.saldo = saldo;
         this.valor = valor;
     }

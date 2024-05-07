@@ -6,7 +6,7 @@ public class ContaEspecial extends Conta {
     }
 
     @Override
-    public void sacar (double money) throws SaldoInsuficienteException, ValorNegativoException{
+    public void sacar (double money) throws SaldoInsuficienteException, ValorNegativoException {
         if (money < 0) {
             throw new ValorNegativoException(money);
         }

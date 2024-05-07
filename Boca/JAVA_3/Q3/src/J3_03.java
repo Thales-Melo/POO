@@ -38,10 +38,10 @@ public class J3_03 {
                     System.out.println(conta.toString());
                 }
                 catch (SaldoInsuficienteException e) {
-                    System.out.println(e);
+                    System.out.println(e.getMessage());
                 }
                 catch (ValorNegativoException e) {
-                    System.out.println(e);
+                    System.out.println(e.getMessage());
                 }
             }
 
