@@ -11,7 +11,10 @@ public class Conta {
         return saldo;
     }
 
-    public void depositar (double money) {
+    public void depositar (double money) throws ValorNegativoException {
+        if (money < 0) {
+            throw new ValorNegativoException(money);
+        }
         this.saldo += money;
     }
 

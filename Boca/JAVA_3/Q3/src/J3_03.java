@@ -28,8 +28,14 @@ public class J3_03 {
         while (verify.equals(".") == false) {
             String[] entry = verify.split("\\s+");
             if (entry[0].equals("+")) {
-                conta.depositar(Double.parseDouble(entry[1]));
-                System.out.println(conta.toString());
+                try {
+                    conta.depositar(Double.parseDouble(entry[1]));
+                    System.out.println(conta.toString());
+                } catch (ValorNegativoException e) {
+                    System.out.println(e.getMessage());
+                    input.close();
+                    return;
+                }
             }
 
             else if (entry[0].equals("-")) {
@@ -39,9 +45,13 @@ public class J3_03 {
                 }
                 catch (SaldoInsuficienteException e) {
                     System.out.println(e.getMessage());
+                    input.close();
+                    return;
                 }
                 catch (ValorNegativoException e) {
                     System.out.println(e.getMessage());
+                    input.close();
+                    return;
                 }
             }
 
