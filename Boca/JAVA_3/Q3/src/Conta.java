@@ -1,7 +1,9 @@
+import java.util.Locale;
+
 public class Conta {
     protected double saldo;
     private static final double TAXA_DE_SAQUE = 0.005;
-
+    private static final Locale br = new Locale("pt", "BR");
 
     public Conta () {
         this.saldo = 0;
@@ -23,14 +25,14 @@ public class Conta {
             throw new ValorNegativoException(money);
         }
         else if (money > this.saldo) {
-            throw new SaldoInsuficienteException(this.saldo, money);
+            throw new SaldoInsuficienteException(money, this.saldo);
         }
         this.saldo -= (money+(money*TAXA_DE_SAQUE));
     }
 
     @Override
     public String toString () {
-        return String.format("R$ %.2f", this.saldo).replace(".", ",");
+        return String.format(br, "R$ %.2f", this.saldo).replace(".", ",");
     }
 
 }

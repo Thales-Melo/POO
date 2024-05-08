@@ -11,9 +11,9 @@ public class ContaEspecial extends Conta {
             throw new ValorNegativoException(money);
         }
         else if (money > this.saldo) {
-            throw new SaldoInsuficienteException(this.saldo, money);
+            throw new SaldoInsuficienteException(money, this.saldo);
         }
-        System.out.println(this.saldo);
+        
         this.saldo = this.saldo - (money+(money*TAXA_DE_SAQUE));
     }
 

@@ -32,7 +32,7 @@ public class J3_03 {
                     conta.depositar(Double.parseDouble(entry[1]));
                     System.out.println(conta.toString());
                 } catch (ValorNegativoException e) {
-                    System.out.println(e.getMessage());
+                    System.out.printf(e.getMessage());
                     input.close();
                     return;
                 }
@@ -44,12 +44,12 @@ public class J3_03 {
                     System.out.println(conta.toString());
                 }
                 catch (SaldoInsuficienteException e) {
-                    System.out.println(e.getMessage());
+                    System.out.printf(e.getMessage());
                     input.close();
                     return;
                 }
                 catch (ValorNegativoException e) {
-                    System.out.println(e.getMessage());
+                    System.out.printf(e.getMessage());
                     input.close();
                     return;
                 }
