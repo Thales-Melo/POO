@@ -1,7 +1,7 @@
 public abstract class Poligono implements Forma {
     private double[] lados;
 
-    public Poligono (double[] lados) {
+    public Poligono (double... lados) {
         this.lados = lados;
     }
 
