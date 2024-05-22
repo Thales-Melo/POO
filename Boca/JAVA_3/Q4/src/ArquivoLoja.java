@@ -22,12 +22,12 @@ public class ArquivoLoja {
                 
             }
             catch (IOException e) {
-                System.out.println(e.getMessage());
+                // System.out.println(e.getMessage());
             }
 
         } 
         catch (FileNotFoundException f) {
-            System.out.println(f.getMessage());
+            // System.out.println(f.getMessage());
         }
 
         return loja;
