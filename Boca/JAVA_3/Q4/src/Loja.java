@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Loja {
 
     private Filial[] filiais;
@@ -18,7 +20,7 @@ public class Loja {
     public void resumo () {
         int i=1;
         for (Filial filial : filiais) {
-            System.out.printf("Filial %d: ", i);
+            System.out.printf(new Locale("pt", "BR"), "Filial %d: ", i);
             System.out.println(filial);
             i++;
         }

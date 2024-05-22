@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Filial {
 
@@ -38,7 +39,7 @@ public class Filial {
     
     @Override
     public String toString () {
-        return String.format("Total = R$ %.2f; Media = R$ %.2f", this.valorTotalVendas(), this.valorMedioVendas());
+        return String.format(new Locale("pt", "BR"), "Total = R$ %.2f; Media = R$ %.2f", this.valorTotalVendas(), this.valorMedioVendas());
     }
 
 }
