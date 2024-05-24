@@ -18,10 +18,12 @@ public class J3_06 {
 
 
         Date date = dateFormat.parse(dateString);
-        SimpleDateFormat dayOfTheWeekFormat = new SimpleDateFormat("EEEE");
+        SimpleDateFormat dayOfTheWeekFormat = new SimpleDateFormat("EEEE", new Locale("pt", "BR"));
         String dayOfTheWeek = dayOfTheWeekFormat.format(date);
 
-        out.printf(new Locale("pt", "BR"), "%s - ocorreu num(a) %s\n", event, dayOfTheWeek);
+        dayOfTheWeek = dayOfTheWeek.substring(0, 1).toUpperCase() + dayOfTheWeek.substring(1).toLowerCase();
+
+        out.printf("%s - ocorreu num(a) %s\n", event, dayOfTheWeek);
     }   
 }
 
