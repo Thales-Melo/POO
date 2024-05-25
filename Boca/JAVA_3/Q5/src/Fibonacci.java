@@ -29,14 +29,11 @@ public class Fibonacci {
 
     public static void saveFibonacci (int n, String dir) {
         try {
-            if (dir.startsWith("/")) {
-                dir = dir.substring(1);
-            }
             FileWriter file = new FileWriter(dir + "/" + java.util.UUID.randomUUID().toString());
             PrintWriter saveFile = new PrintWriter(file);
             String fibonacci = geraFibonacci(n);
             saveFile.println(fibonacci);
-            System.out.println(fibonacci.length());
+            System.out.println(fibonacci.length()+1);
             saveFile.close();
         }
         catch (IOException e) {
