@@ -2,6 +2,7 @@ CC = g++
 CFLAGS = -Wall
 
 SRCS = main.cpp src/Pessoa.cpp src/StringUtils.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: main
 
@@ -15,7 +16,7 @@ clean:
 	rm -f $(OBJS) main *.out 
 
 run:
-	./main < desc_CPP_02/Casos/1/entrada.txt
+	./main
 
 val:
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s time ./main < desc_CPP_02/Casos/2/entrada.txt
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./main

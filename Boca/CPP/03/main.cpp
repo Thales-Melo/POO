@@ -21,21 +21,27 @@ int main () {
             pessoas.push_back(p);
         }
         else if (op == "listar") {
-            for (int i = 0; i < pessoas.size(); i++) {
-                cout << pessoas[i] << endl;
+            for (const auto& pessoa : pessoas) {
+                cout << pessoa << endl;
             }
         }
         else if (op == "ordenar") {
             char criterio;
             cin >> criterio;
             if (criterio == 'N') {
-                sort(pessoas.begin(), pessoas.end(), Pessoa::comparaPorNome);
+                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
+                    return Pessoa::comparaPorNome(&p1, &p2);
+                });
             }
             else if (criterio == 'I') {
-                sort(pessoas.begin(), pessoas.end(), Pessoa::comparaPorIdade);
+                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
+                    return Pessoa::comparaPorIdade(&p1, &p2);
+                });
             }
             else if (criterio == 'A') {
-                sort(pessoas.begin(), pessoas.end(), Pessoa::comparaPorAltura);
+                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
+                    return Pessoa::comparaPorAltura(&p1, &p2);
+                });
             }
         }
         else if (op == "excluir") {

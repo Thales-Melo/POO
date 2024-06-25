@@ -1,0 +1,17 @@
+cadastrar thales 21 27
+cadastrar gugas 20 40
+cadastrar messi 10 10
+cadastrar neymar 11 2
+cadastrar cristiano 7 99
+listar
+ordenar N
+listar
+ordenar I
+listar
+ordenar A
+listar
+excluir 2
+listar
+excluir 1
+listar
+sair
