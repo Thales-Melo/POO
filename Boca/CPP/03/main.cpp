@@ -4,6 +4,18 @@
 #include <algorithm>
 using namespace std;
 
+bool comparaPorNome(const Pessoa& p1, const Pessoa& p2) {
+    return Pessoa::comparaPorNome(&p1, &p2);
+}
+
+bool comparaPorIdade(const Pessoa& p1, const Pessoa& p2) {
+    return Pessoa::comparaPorIdade(&p1, &p2);
+}
+
+bool comparaPorAltura(const Pessoa& p1, const Pessoa& p2) {
+    return Pessoa::comparaPorAltura(&p1, &p2);
+}
+
 int main () {
 
     vector<Pessoa> pessoas;
@@ -29,19 +41,13 @@ int main () {
             char criterio;
             cin >> criterio;
             if (criterio == 'N') {
-                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
-                    return Pessoa::comparaPorNome(&p1, &p2);
-                });
+                sort(pessoas.begin(), pessoas.end(), comparaPorNome);
             }
             else if (criterio == 'I') {
-                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
-                    return Pessoa::comparaPorIdade(&p1, &p2);
-                });
+                sort(pessoas.begin(), pessoas.end(), comparaPorIdade);
             }
             else if (criterio == 'A') {
-                sort(pessoas.begin(), pessoas.end(), [](const Pessoa& p1, const Pessoa& p2) {
-                    return Pessoa::comparaPorAltura(&p1, &p2);
-                });
+                sort(pessoas.begin(), pessoas.end(), comparaPorAltura);
             }
         }
         else if (op == "excluir") {
