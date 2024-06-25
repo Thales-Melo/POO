@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "src/Pessoa.hpp"
+#include "Pessoa.hpp"
 #include <algorithm>
 using namespace std;
 
@@ -33,8 +33,10 @@ int main () {
             pessoas.push_back(p);
         }
         else if (op == "listar") {
+            int i=0;
             for (const auto& pessoa : pessoas) {
-                cout << pessoa << endl;
+                cout << i << ": " << pessoa << endl;
+                i++;
             }
         }
         else if (op == "ordenar") {

@@ -20,6 +20,6 @@ bool Pessoa::comparaPorAltura(const Pessoa* p1, const Pessoa* p2) {
 }
 
 ostream& operator<< (ostream& os, const Pessoa& p) {
-    os << p.nome << " " << p.idade << " " << p.altura;
+    os << p.nome << " (idade: " << p.idade << "; altura: " << p.altura << ")";
     return os;
 }

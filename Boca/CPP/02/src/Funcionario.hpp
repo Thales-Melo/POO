@@ -19,6 +19,7 @@ public:
 	void darAumento(double percentual);
 	double getSalario() const;
 	string getNome() const;
+	~Funcionario();
 };
 
 #endif

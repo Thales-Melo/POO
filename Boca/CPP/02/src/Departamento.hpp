@@ -19,6 +19,7 @@ public:
 	void remover(int idx);
 	void transferir(const int idxFunc, Departamento* destino);
 	double calcularCusto() const;
+	~Departamento();
 };
 
 #endif

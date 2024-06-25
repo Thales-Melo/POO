@@ -13,6 +13,19 @@ string Departamento::getNome() const {
 }
 
 void Departamento::adicionar(Funcionario* funcionario) {
+    if (this->idxFuncs >= this->numFuncs) {
+        Funcionario** novoFuncionario = new Funcionario*[this->numFuncs * 2];
+
+        for (int i=0; i<this->numFuncs; i++) {
+            novoFuncionario[i] = this->funcionarios[i];
+        }
+
+        delete[] this->funcionarios;
+
+        this->funcionarios = novoFuncionario;
+        this->numFuncs *= 2;
+
+    }
     this->funcionarios[this->idxFuncs] = funcionario;
     this->idxFuncs++;
 }
@@ -24,7 +37,6 @@ void Departamento::darAumento(const double percentual) {
 }
 
 void Departamento::remover(int idx) {
-    delete this->funcionarios[idx];
     for (int i=idx; i<this->idxFuncs-1; i++) {
         this->funcionarios[i] = this->funcionarios[i+1];
     }
@@ -42,4 +54,14 @@ double Departamento::calcularCusto() const {
         custoTotal += this->funcionarios[i]->getSalario();
     }
     return custoTotal;
+}
+
+Departamento::~Departamento() {
+    for (int i=0; i<this->numFuncs; i++) {
+        if (this->funcionarios[i] != nullptr) {
+            delete this->funcionarios[i];
+            this->funcionarios[i] = nullptr;
+        }
+    } 
+    delete []this->funcionarios;
 }

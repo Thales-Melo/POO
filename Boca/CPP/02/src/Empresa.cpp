@@ -34,5 +34,10 @@ ostream& operator<< (ostream &out, const Empresa &empresa) {
     return out;
 }
 
-
+Empresa::~Empresa() {
+    for (int i=0; i<this->numDeps; i++) {
+        delete this->departamentos[i];
+    }
+    delete []this->departamentos;
+}
 

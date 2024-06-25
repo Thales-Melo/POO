@@ -17,3 +17,7 @@ double Funcionario::getSalario() const {
 string Funcionario::getNome() const {
     return this->nome;
 }
+
+Funcionario::~Funcionario() {
+    // delete this;
+}

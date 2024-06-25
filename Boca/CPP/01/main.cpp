@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src/Triangulo.hpp"
+#include "Triangulo.hpp"
 using namespace std;
 
 int main() {

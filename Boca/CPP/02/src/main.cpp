@@ -1,7 +1,7 @@
 #include <iostream>
-#include "src/Departamento.hpp"
-#include "src/Empresa.hpp"
-#include "src/Funcionario.hpp"
+#include "Departamento.hpp"
+#include "Empresa.hpp"
+#include "Funcionario.hpp"
 
 int main () {
 

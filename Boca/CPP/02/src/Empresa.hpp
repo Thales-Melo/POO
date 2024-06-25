@@ -18,6 +18,7 @@ public:
 	void darAumento(const int idx, const double percentual);
 	void transferir(const int idxDeptoOrigem, const int idxFunc, const int idxDeptoDestino);
 	friend ostream& operator<< (ostream &out, const Empresa &empresa);
+	~Empresa();
 };
 
 #endif

@@ -1,8 +1,8 @@
 CC = g++
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 LDFLAGS =
 
-SRCS = main.cpp Ponto.cpp Triangulo.cpp
+SRCS = main.cpp Pessoa.cpp StringUtils.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .PHONY: all clean run val
@@ -21,7 +21,7 @@ clean:
 	rm -f $(OBJS) main
 
 run: all
-	./main
+	./main < ../Casos/1/entrada.txt > saida.txt
 
 val: all
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./main
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./main < ../Casos/1/entrada.txt > saida.txt
