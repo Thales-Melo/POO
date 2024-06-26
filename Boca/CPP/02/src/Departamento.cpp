@@ -57,7 +57,7 @@ double Departamento::calcularCusto() const {
 }
 
 Departamento::~Departamento() {
-    for (int i=0; i<this->numFuncs; i++) {
+    for (int i=0; i<this->idxFuncs; i++) {
         if (this->funcionarios[i] != nullptr) {
             delete this->funcionarios[i];
             this->funcionarios[i] = nullptr;

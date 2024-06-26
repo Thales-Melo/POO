@@ -60,7 +60,7 @@ int main() {
             delete p;
 
             if (!found) {
-                cout << "Produto nao encontrado" << endl;
+                cout << "Produto nao encontrado." << endl;
             }
         }
     }

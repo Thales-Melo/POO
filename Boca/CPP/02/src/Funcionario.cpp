@@ -19,5 +19,4 @@ string Funcionario::getNome() const {
 }
 
 Funcionario::~Funcionario() {
-    // delete this;
 }

@@ -24,4 +24,4 @@ run: all
 	./main < ../desc_CPP_02/Casos/1/entrada.txt 
 
 val: all
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./main < ../desc_CPP_02/Casos/1/entrada.txt 
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -s ./main < ../desc_CPP_02/Casos/1/entrada.txt > saida.txt 
